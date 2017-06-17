@@ -5,6 +5,6 @@ but they start for the last page.
 
 This tool merges the 2 PDF files and reorder the pages correctly.
 
-# License
+# License
 
 The tool is using [unidoc](https://github.com/unidoc/unidoc) that's why it's license is [AGPL](http://www.gnu.org/licenses/agpl.html) to be compatible with unidoc.
