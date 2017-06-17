@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-VERSION=0.0.5-SNAPSHOT
+VERSION=1.0.0
 
 
 mkdir -p dist
