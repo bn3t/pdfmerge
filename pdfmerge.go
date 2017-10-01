@@ -6,7 +6,7 @@ import (
 
 	unicommon "github.com/unidoc/unidoc/common"
 	//unilicense "github.com/unidoc/unidoc/license"
-	unipdf "github.com/unidoc/unidoc/pdf"
+	pdf "github.com/unidoc/unidoc/pdf/model"
 )
 
 func initUnidoc() error {
@@ -19,7 +19,7 @@ func initUnidoc() error {
 }
 
 func mergePdf(output string, input1 string, input2 string) error {
-	pdfWriter := unipdf.NewPdfWriter()
+	pdfWriter := pdf.NewPdfWriter()
 	finput1, err := os.Open(input1)
 	if err != nil {
 		return err
@@ -30,11 +30,11 @@ func mergePdf(output string, input1 string, input2 string) error {
 		return err
 	}
 	defer finput2.Close()
-	pdfReader1, err := unipdf.NewPdfReader(finput1)
+	pdfReader1, err := pdf.NewPdfReader(finput1)
 	if err != nil {
 		return err
 	}
-	pdfReader2, err := unipdf.NewPdfReader(finput2)
+	pdfReader2, err := pdf.NewPdfReader(finput2)
 	if err != nil {
 		return err
 	}
